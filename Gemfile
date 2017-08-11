@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.3.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'figaro'
 gem 'puma'
+gem 'sidekiq'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -49,5 +50,6 @@ group :development do
   gem 'capistrano3-puma'
   gem 'capistrano-rails', require: false
   gem 'capistrano-bundler', require: false
-  gem 'capistrano-rvm'
+  gem 'rvm1-capistrano3', require: false
+  gem 'capistrano-sidekiq'
 end
